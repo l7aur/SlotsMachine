@@ -13,7 +13,6 @@ public class Button extends QPushButton {
         layout1.addWidget(this);
         layout1.addStretch();
         layout.addLayout(layout1);
-        layout.addStretch();
         return layout;
     }
     public QBoxLayout buttonLeftCornerLayout(){ //dynamically place the button in the bottom right corner
@@ -23,7 +22,6 @@ public class Button extends QPushButton {
         layout1.addWidget(this);
         layout1.addStretch();
         layout.addLayout(layout1);
-        layout.addStretch();
         return layout;
     }
 

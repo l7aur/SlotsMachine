@@ -1,6 +1,7 @@
 package UI_thingies;
-import io.qt.gui.QIcon;
+import io.qt.gui.*;
 import io.qt.widgets.*;
+
 
 public class Window extends QWidget {
     public Window() {
@@ -21,15 +22,26 @@ public class Window extends QWidget {
 
         //on action do action
         exitButton.setExitAction(exitListener);
-        rollButton.setRollAction(rollListener);
+        //rollButton.setRollAction(rollListener);
 
-        //set the layout
+        //add the exit button
         QBoxLayout layout = exitButton.buttonLeftCornerLayout();
-        layout.addLayout(rollButton.buttonRightCornerLayout());
-        setLayout(layout);
+        layout.setAlignment();
 
+//        QGraphicsView view = new QGraphicsView(new QGraphicsScene());
+//        QGraphicsLineItem line = new QGraphicsLineItem(0, 0, 1000, 700);
+//        view.scene().addItem(line);
+//        layout.addWidget(view);
+
+        WheelUI wheel = new WheelUI(new QGraphicsScene());
+        layout.addWidget(wheel);
+
+        //add the roll button
+        layout.addLayout(rollButton.buttonRightCornerLayout());
+
+        setLayout(layout);
         //size the window to 1080x720 and show it
-        this.resize(1080, 720);
+        this.resize(1000, 800);
         this.show();
     }
 }
