@@ -1,13 +1,7 @@
 package UI_thingies;
-
-import io.qt.gui.QWindow;
 import io.qt.widgets.*;
-import jdk.jfr.Label;
-
-import javax.annotation.processing.SupportedAnnotationTypes;
-
 public class ExitButton extends QPushButton {
-    public ExitButton(QWidget parent) throws Exception { //create a push button that depends on a widget and has the text 'EXIT'
+    public ExitButton(QWidget parent) { //create a push button that depends on a widget and has the text 'EXIT'
         super("EXIT", parent);
         //connect the button to the action
         this.clicked.connect(this, "onExitButtonClicked()");
