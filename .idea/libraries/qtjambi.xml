@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="qtjambi">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.jdks/qtjambi" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/.jdks/qtjambi" recursive="false" />
+  </library>
+</component>
