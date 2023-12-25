@@ -1,7 +1,10 @@
 package UI_thingies;
+
+import backendish.Wheel;
+
 public class RollButtonClickListener {
-    public void onRollButtonClicked() {
+    public void onRollButtonClicked(Window window, Wheel wheel) {
         System.out.println("ROLLING...");
-        //TBD
+        window = window.updateWindow(wheel);
     }
 }

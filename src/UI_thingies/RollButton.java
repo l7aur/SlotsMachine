@@ -1,11 +1,18 @@
 package UI_thingies;
 import io.qt.widgets.*;
+import backendish.Wheel;
+
 public class RollButton extends Button {
-    public RollButton(QWidget parent) { //create a push button that depends on a widget and has the text 'ROLL'
+    private Window window;
+    private Wheel wheel;
+
+    public RollButton(QWidget parent, Window window, Wheel wheel) {
         super("ROLL", parent);
+        this.window = window;
+        this.wheel = wheel;
     }
 
-    void setRollAction(RollButtonClickListener listener){ //create action - click - listener
-        this.clicked.connect(listener, "onRollButtonClicked()");
+    void setRollAction(RollButtonClickListener listener){
+        this.clicked.connect(() -> listener.onRollButtonClicked(window, wheel));
     }
 }

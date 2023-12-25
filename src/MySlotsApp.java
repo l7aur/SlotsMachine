@@ -1,4 +1,5 @@
 import UI_thingies.Window;
+import backendish.Wheel;
 import io.qt.widgets.QApplication;
 
 public class MySlotsApp extends QApplication {
@@ -6,7 +7,8 @@ public class MySlotsApp extends QApplication {
         super(args);
     }
     public static void start(){
-        Window window = new Window();
+        Wheel wheel = new Wheel();
+        Window window = new Window(null);
         MySlotsApp.exec();
     }
 }
