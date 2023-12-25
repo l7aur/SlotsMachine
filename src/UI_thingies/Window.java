@@ -5,7 +5,7 @@ import io.qt.widgets.*;
 
 public class Window extends QWidget {
     public Window() {
-        //create a window and set its icon
+        //create a window, name it and set its icon
         super();
         setWindowTitle("KamchatkaGulagSlots");
         QIcon icon = new QIcon("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\logo2.png");
@@ -28,18 +28,16 @@ public class Window extends QWidget {
         QBoxLayout layout = exitButton.buttonLeftCornerLayout();
         layout.setAlignment();
 
-//        QGraphicsView view = new QGraphicsView(new QGraphicsScene());
-//        QGraphicsLineItem line = new QGraphicsLineItem(0, 0, 1000, 700);
-//        view.scene().addItem(line);
-//        layout.addWidget(view);
-
+        //add the initial wheel
         WheelUI wheel = new WheelUI(new QGraphicsScene());
         layout.addWidget(wheel);
 
         //add the roll button
         layout.addLayout(rollButton.buttonRightCornerLayout());
 
+        //set the GUI in the display window
         setLayout(layout);
+
         //size the window to 1000x600 and show it
         this.resize(1000, 600);
         this.show();
