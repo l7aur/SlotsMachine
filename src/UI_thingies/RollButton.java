@@ -13,6 +13,7 @@ public class RollButton extends Button {
     }
 
     void setRollAction(RollButtonClickListener listener){
+        //idk lambda function
         this.clicked.connect(() -> listener.onRollButtonClicked(window, wheel));
     }
 }

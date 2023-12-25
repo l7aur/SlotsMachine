@@ -7,10 +7,6 @@ public class Window extends QWidget {
     //parametrisation
     private static final QIcon icon = new QIcon("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\logo2.png");
     private static final String gameName = "KamchatkaGulagSlots";
-    private static QBoxLayout layout;
-    private QGraphicsScene graphicsScene = new QGraphicsScene();
-    //private RollButtonClickListener rollButtonClickListener;
-    //private ExitButtonClickListener exitButtonClickListener;
     public Window(Wheel theWheel) {
         //create a window, name it and set its icon
         super();
@@ -31,7 +27,7 @@ public class Window extends QWidget {
         rollButton.setRollAction(rollButtonClickListener);
 
         //add the exit button
-        layout = exitButton.buttonLeftCornerLayout();
+        QBoxLayout layout = exitButton.buttonLeftCornerLayout();
         layout.setAlignment();
 
         //add the initial wheel
@@ -49,18 +45,14 @@ public class Window extends QWidget {
         this.show();
     }
 
-    public void updateWindow(Wheel wheel){
-//        System.out.println("nu");
+    public Window updateWindow(Wheel wheel){
+        //get new values in the wheel roll
         wheel.getNewWheel();
-//        System.out.println("updateWindow: ");
-//        for (int i = 0; i < 10; i++) {
-//            System.out.print(wheel.getLuckyNumbers().get(i) + " ");
-//        }
-//        System.out.println();
-        this.hide(); //TBD
+        //update the display
         Window newWindow = new Window(wheel);
         newWindow.show();
-        System.out.println("check2");
+        //return the current display for removal
+        return this;
     }
 
 }

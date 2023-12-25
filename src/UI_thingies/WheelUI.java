@@ -16,17 +16,19 @@ public class WheelUI extends QGraphicsView {
     private static final Integer width = 200;
     private static final Integer height = 175;
     private static final Integer dimension = 3;
+    //position on OX axis in the display
     private static final ArrayList<Integer> posX = new ArrayList<>();
+    //position on OY axis in the display
     private static final ArrayList<Integer> posY = new ArrayList<>();
+    //map of integer values in backend to nice corresponding, suggestive and appealing pictures
+    private static final Map<Integer, QPixmap> numberToPic = new HashMap<>();
+
+    //Initializing the constants within a static block
     static {
-            for(int i = 0; i < dimension; i++){
+        for (int i = 0; i < dimension; i++) {
             posX.add(i * width);
             posY.add(i * height);
         }
-    }
-    private static final Map<Integer, QPixmap> numberToPic = new HashMap<>();
-    static {
-        //Initializing the static map within a static block
         numberToPic.put(0, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\beer.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
         numberToPic.put(1, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\campari.png")
@@ -48,7 +50,12 @@ public class WheelUI extends QGraphicsView {
         numberToPic.put(9, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\wine.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
     }
+
     //create the game grid as a dimension x dimension matrix of images
+
+    //ar fi bine sa nu fie final in caz ca voi face sa mearga in acelasi
+    //widget si nu in widgeturi diferite (dau refactor in loc de apelari de
+    // constructori)
     private QPixmap[][] displayedGrid;
 
     public WheelUI(QGraphicsScene slotScene, Wheel wheel){
@@ -59,10 +66,6 @@ public class WheelUI extends QGraphicsView {
         this.updateNewDisplayedGrid(wheel);
     }
     public void updateNewDisplayedGrid(Wheel wheel){
-//        System.out.println("update: ");
-//        for (int i = 0; i < 10; i++)
-//            System.out.print(wheel.getLuckyNumbers().get(i) + " ");
-//        System.out.println();
         for(int i = 0; i < dimension; i++)
             for(int j = 0; j < dimension; j++) {
                 this.setDisplayedGrid(i,j, numberToPic.get(wheel.getLuckyNumbers().get(i * dimension + j)));
@@ -73,9 +76,7 @@ public class WheelUI extends QGraphicsView {
                 Objects.requireNonNull(this.scene()).addItem(item);
             }
     }
-    public void clearDisplayedGrid(){
-        Objects.requireNonNull(this.scene()).clear();
-    }
+
     private QPixmap getDisplayedGrid(int i, int j) {
         return displayedGrid[i][j];
     }
