@@ -22,7 +22,7 @@ public class Window extends QWidget {
 
         //on action do action
         exitButton.setExitAction(exitListener);
-        //rollButton.setRollAction(rollListener);
+        rollButton.setRollAction(rollListener);
 
         //add the exit button
         QBoxLayout layout = exitButton.buttonLeftCornerLayout();
@@ -40,8 +40,8 @@ public class Window extends QWidget {
         layout.addLayout(rollButton.buttonRightCornerLayout());
 
         setLayout(layout);
-        //size the window to 1080x720 and show it
-        this.resize(1000, 800);
+        //size the window to 1000x600 and show it
+        this.resize(1000, 600);
         this.show();
     }
 }
