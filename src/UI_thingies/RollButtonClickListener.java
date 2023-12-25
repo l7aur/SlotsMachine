@@ -5,6 +5,6 @@ import backendish.Wheel;
 public class RollButtonClickListener {
     public void onRollButtonClicked(Window window, Wheel wheel) {
         System.out.println("ROLLING...");
-        window = window.updateWindow(wheel);
+        window.updateWindow(wheel);
     }
 }

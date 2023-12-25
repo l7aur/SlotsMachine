@@ -35,11 +35,7 @@ public class Window extends QWidget {
         layout.setAlignment();
 
         //add the initial wheel
-        WheelUI wheel;
-        if(theWheel != null)
-            wheel = new WheelUI(new QGraphicsScene(), theWheel);
-        else
-            wheel = new WheelUI(new QGraphicsScene());
+        WheelUI wheel = new WheelUI(new QGraphicsScene(), theWheel);
         layout.addWidget(wheel);
 
         //add the roll button
@@ -53,21 +49,18 @@ public class Window extends QWidget {
         this.show();
     }
 
-    public Window updateWindow(Wheel wheel){
-        System.out.println("nu");
-        if(wheel == null)
-            wheel = new Wheel();
+    public void updateWindow(Wheel wheel){
+//        System.out.println("nu");
         wheel.getNewWheel();
-        System.out.println("updateWindow: ");
-        for (int i = 0; i < 10; i++) {
-            System.out.print(wheel.getLuckyNumbers().get(i) + " ");
-        }
-        System.out.println();
-        //this.hide(); //TBD
-        return new Window(wheel);
+//        System.out.println("updateWindow: ");
+//        for (int i = 0; i < 10; i++) {
+//            System.out.print(wheel.getLuckyNumbers().get(i) + " ");
+//        }
+//        System.out.println();
+        this.hide(); //TBD
+        Window newWindow = new Window(wheel);
+        newWindow.show();
+        System.out.println("check2");
     }
 
-//    public RollButtonClickListener getRollButtonClickListener() {
-//        return rollButtonClickListener;
-//    }
 }

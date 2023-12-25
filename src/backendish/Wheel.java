@@ -1,12 +1,22 @@
 package backendish;
 
 
+import UI_thingies.WheelUI;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
-
 public class Wheel {
-    private final ArrayList<Integer> luckyNumbers= new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
+    private ArrayList<Integer> luckyNumbers= new ArrayList<>();
+    private static final Integer startingImageNumber = 1; // has to be smaller than the size of the luckyNumberArray
+    private static final Integer arraySize = 10;
+
+    public Wheel(){
+        for (int i = 0; i < arraySize; i++) {
+            this.luckyNumbers.add(startingImageNumber);
+        }
+    }
+
     public void getNewWheel() {
         this.luckyNumbers.clear();
         System.out.println("New wheel generation: ");

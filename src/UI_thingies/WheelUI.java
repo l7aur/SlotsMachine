@@ -51,13 +51,6 @@ public class WheelUI extends QGraphicsView {
     //create the game grid as a dimension x dimension matrix of images
     private QPixmap[][] displayedGrid;
 
-    public WheelUI(QGraphicsScene slotScene){
-        super(slotScene);
-        //initialize the game grid and the image postion vectors
-        displayedGrid = new QPixmap[dimension][dimension];
-        //initialize each item in the matrix with a picture contained at string
-        this.updateNewDisplayedGrid();
-    }
     public WheelUI(QGraphicsScene slotScene, Wheel wheel){
         super(slotScene);
         //initialize the game grid and the image postion vectors
@@ -65,29 +58,14 @@ public class WheelUI extends QGraphicsView {
         //initialize each item in the matrix with a picture contained at string
         this.updateNewDisplayedGrid(wheel);
     }
-
-    public void updateNewDisplayedGrid(){
-        for (int i = 0; i < dimension; i++)
-            for(int j = 0; j < dimension; j++) {
-                //convert the image to a qt object and resize it so that all images have the same resolution
-                this.setDisplayedGrid(i, j, new QPixmap(("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\campari.png"))
-                        .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-                //convert the pixmap to an item so that I can add it to the scene (and display it)
-                QGraphicsPixmapItem item = new QGraphicsPixmapItem(this.getDisplayedGrid(i, j));
-                //set the position of each image based on the position vectors
-                item.setPos(posX.get(j), posY.get(i));
-                //add the item to the scene
-                Objects.requireNonNull(this.scene()).addItem(item);
-            }
-    }
     public void updateNewDisplayedGrid(Wheel wheel){
 //        System.out.println("update: ");
-//        for (int i = 0; i < 10; i++) {
+//        for (int i = 0; i < 10; i++)
 //            System.out.print(wheel.getLuckyNumbers().get(i) + " ");
-//        }
+//        System.out.println();
         for(int i = 0; i < dimension; i++)
             for(int j = 0; j < dimension; j++) {
-                this.setDisplayedGrid(i,j, numberToPic.get(i * dimension + j));
+                this.setDisplayedGrid(i,j, numberToPic.get(wheel.getLuckyNumbers().get(i * dimension + j)));
                 QGraphicsPixmapItem item = new QGraphicsPixmapItem(this.getDisplayedGrid(i, j));
                 //set the position of each image based on the position vectors
                 item.setPos(posX.get(j), posY.get(i));

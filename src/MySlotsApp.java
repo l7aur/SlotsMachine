@@ -8,7 +8,7 @@ public class MySlotsApp extends QApplication {
     }
     public static void start(){
         Wheel wheel = new Wheel();
-        Window window = new Window(null);
+        Window window = new Window(wheel);
         MySlotsApp.exec();
     }
 }
