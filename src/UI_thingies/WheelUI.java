@@ -23,34 +23,6 @@ public class WheelUI extends QGraphicsView {
     //map of integer values in backend to nice corresponding, suggestive and appealing pictures
     private static final Map<Integer, QPixmap> numberToPic = new HashMap<>();
 
-    //Initializing the constants within a static block
-    static {
-        for (int i = 0; i < dimension; i++) {
-            posX.add(i * width);
-            posY.add(i * height);
-        }
-        numberToPic.put(0, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\beer.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(1, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\campari.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(2, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\champagne.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(3, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\gin.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(4, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\jack.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(5, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\rum.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(6, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\strongbow.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(7, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\tuica.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(8, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\vodka.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(9, new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\wine.png")
-                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-    }
-
     //create the game grid as a dimension x dimension matrix of images
 
     //ar fi bine sa nu fie final in caz ca voi face sa mearga in acelasi
@@ -60,6 +32,31 @@ public class WheelUI extends QGraphicsView {
 
     public WheelUI(QGraphicsScene slotScene, Wheel wheel){
         super(slotScene);
+        for (int i = 0; i < dimension; i++) {
+            posX.add(i * width);
+            posY.add(i * height);
+        }
+        numberToPic.put(wheel.getTier1Number().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\tuica.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier2Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\jack.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier2Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\vodka.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier3Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\gin.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier3Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\rum.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier3Number3().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\campari.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier4Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\champagne.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier4Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\wine.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier4Number3().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\strongbow.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+        numberToPic.put(wheel.getTier4Number4().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\beer.png")
+                .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
+
         //initialize the game grid and the image postion vectors
         displayedGrid = new QPixmap[dimension][dimension];
         //initialize each item in the matrix with a picture contained at string

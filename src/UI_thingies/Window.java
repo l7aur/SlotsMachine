@@ -1,5 +1,7 @@
 package UI_thingies;
+import backendish.Account;
 import backendish.Wheel;
+import io.qt.core.Qt;
 import io.qt.gui.*;
 import io.qt.widgets.*;
 
@@ -7,18 +9,23 @@ public class Window extends QWidget {
     //parametrisation
     private static final QIcon icon = new QIcon("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\logo2.png");
     private static final String gameName = "KamchatkaGulagSlots";
-    public Window(Wheel theWheel) {
+    private QLabel accountSoldDisplay;
+    private QTextEdit betAmount;
+    private QLabel betLabel;
+    public Window(Wheel theWheel, Account account) {
         //create a window, name it and set its icon
         super();
         setWindowTitle(gameName);
         setWindowIcon(icon);
+        accountSoldDisplay = new QLabel("SOLD: " + account.getSold().toString());
+        //betLabel = new QLabel("BET: ");
+        betAmount = new QTextEdit("50");
+        accountSoldDisplay.setAlignment(Qt.AlignmentFlag.AlignCenter);
+        betAmount.setAlignment(Qt.AlignmentFlag.AlignCenter);
 
-        //add the exit button in the bottom left corner
-        //add the roll button in the bottom right corner
+        //create the exit button, the roll button + the listeners, the display of the sold and the bet
         ExitButton exitButton = new ExitButton(this);
-        RollButton rollButton = new RollButton(this, this, theWheel);
-
-        //add the event listeners
+        RollButton rollButton = new RollButton(this, this, theWheel, account, betAmount);
         RollButtonClickListener rollButtonClickListener = new RollButtonClickListener();
         ExitButtonClickListener exitButtonClickListener = new ExitButtonClickListener();
 
@@ -28,7 +35,10 @@ public class Window extends QWidget {
 
         //add the exit button
         QBoxLayout layout = exitButton.buttonLeftCornerLayout();
-        layout.setAlignment();
+        layout.addWidget(accountSoldDisplay);
+        layout.addWidget(betAmount);
+
+        //layout.setAlignment();
 
         //add the initial wheel
         WheelUI wheel = new WheelUI(new QGraphicsScene(), theWheel);
@@ -45,14 +55,13 @@ public class Window extends QWidget {
         this.show();
     }
 
-    public Window updateWindow(Wheel wheel){
+    public Window updateWindow(Wheel wheel, Account account){
         //get new values in the wheel roll
         wheel.getNewWheel();
         //update the display
-        Window newWindow = new Window(wheel);
+        Window newWindow = new Window(wheel, account);
         newWindow.show();
         //return the current display for removal
         return this;
     }
-
 }
