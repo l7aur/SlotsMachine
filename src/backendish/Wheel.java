@@ -3,12 +3,12 @@ package backendish;
 import java.util.ArrayList;
 import java.util.Random;
 public class Wheel {
-    private ArrayList<Integer> luckyNumbers= new ArrayList<>();
+    private final ArrayList<Integer> luckyNumbers= new ArrayList<>();
     private static final Integer arraySize = 10;
-    private Tier1Number tier1Number;
-    private Tier2Number tier2Number1, tier2Number2;
-    private Tier3Number tier3Number1, tier3Number2, tier3Number3;
-    private  Tier4Number tier4Number1, tier4Number2, tier4Number3, tier4Number4;
+    private final Tier1Number tier1Number;
+    private final Tier2Number tier2Number1, tier2Number2;
+    private final Tier3Number tier3Number1, tier3Number2, tier3Number3;
+    private final Tier4Number tier4Number1, tier4Number2, tier4Number3, tier4Number4;
     public Wheel(){
         //0 lowest chance to drop, 9 highest
         this.tier1Number = new Tier1Number(0); //tuica

@@ -9,17 +9,15 @@ public class Window extends QWidget {
     //parametrisation
     private static final QIcon icon = new QIcon("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\logo2.png");
     private static final String gameName = "KamchatkaGulagSlots";
-    private QLabel accountSoldDisplay;
-    private QTextEdit betAmount;
-    private QLabel betLabel;
+    //private QLabel betLabel;
     public Window(Wheel theWheel, Account account) {
         //create a window, name it and set its icon
         super();
         setWindowTitle(gameName);
         setWindowIcon(icon);
-        accountSoldDisplay = new QLabel("SOLD: " + account.getSold().toString());
+        QLabel accountSoldDisplay = new QLabel("SOLD: " + account.getSold().toString());
         //betLabel = new QLabel("BET: ");
-        betAmount = new QTextEdit("50");
+        QTextEdit betAmount = new QTextEdit("50");
         accountSoldDisplay.setAlignment(Qt.AlignmentFlag.AlignCenter);
         betAmount.setAlignment(Qt.AlignmentFlag.AlignCenter);
 

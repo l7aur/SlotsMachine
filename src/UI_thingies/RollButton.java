@@ -1,14 +1,13 @@
 package UI_thingies;
 import backendish.Account;
-import io.qt.core.Qt;
 import io.qt.widgets.*;
 import backendish.Wheel;
 
 public class RollButton extends Button {
-    private Window window;
-    private Wheel wheel;
-    private Account account;
-    private QTextEdit text;
+    private final Window window;
+    private final Wheel wheel;
+    private final Account account;
+    private final QTextEdit text;
 
     public RollButton(QWidget parent, Window window, Wheel wheel, Account account, QTextEdit text) {
         super("ROLL", parent);
