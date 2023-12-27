@@ -45,21 +45,40 @@ themselves by the reward they each give. Tier 1 (Jackpot) returns up to 10,000 x
 amountBet.
 
 - First Tier - 1 symbol corresponding to the jackpot symbol in the classic game
-                          ![Țuică](src/images/bottles/tuica.png)
-- *There is no scatter symbol unlike in the classic game*
-- Second Tier - 2 symbols
-                          ![Image Name](src/images/bottles/jack.png) 
-                          ![Image Name](src/images/bottles/vodka.png)
-- Third Tier - 3 symbols 
-                          ![Image Name](src/images/bottles/gin.png)
-                          ![Image Name](src/images/bottles/rum.png)
-                          ![Image Name](src/images/bottles/campari.png)
-- Fourth Tier - 4 symbols 
-                          ![Image Name](src/images/bottles/champagne.png)
-                          ![Image Name](src/images/bottles/wine.png)
-                          ![Image Name](src/images/bottles/strongbow.png)
-                          ![Image Name](src/images/bottles/beer.png)
   
+  <img src="src/images/bottles/tuica.png" alt="Țuică" width="200" height="400">
+  <br>
+
+- *There is no scatter symbol unlike in the classic game*
+  <br>
+
+- Second Tier - 2 symbols
+  
+  <img src="src/images/bottles/jack.png" alt="Jack Daniel's" width="200" height="400">
+  <br>
+  <img src="src/images/bottles/vodka.png" alt="Vodka" width="200" height="400">
+  <br>
+
+- Third Tier - 3 symbols
+
+  <img src="src/images/bottles/gin.png" alt="Gin" width="200" height="400"> 
+  <br>
+  <img src="src/images/bottles/rum.png" alt="Rum" width="200" height="400">
+  <br>
+  <img src="src/images/bottles/campari.png" alt="Campari" width="200" height="400">
+  <br>
+
+- Fourth Tier - 4 symbols
+  
+  <img src="src/images/bottles/champagne.png" alt="Champagne" width="200" height="400">
+  <br>
+  <img src="src/images/bottles/wine.png" alt="Wine" width="200" height="400">
+  <br>
+  <img src="src/images/bottles/strongbow.png" alt="Strongbow" width="200" height="400">
+  <br>
+  <img src="src/images/bottles/beer.png" alt="Beer" width="200" height="400">
+  <br>
+
 The reward system is based on the number of identical tier symbols that appear in the **middle row**.
 - 3 identical symbols of
   - Tier 1 -> x 10,000
