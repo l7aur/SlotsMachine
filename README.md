@@ -5,8 +5,8 @@ second year at Technical University of Cluj-Napoca. Its purpose is to familiariz
 Java programming language, a Java IDE (BlueJ is recommended, but I have used IntelliJ) and the
 object-oriented programming paradigms. There was no theme to choose from, but at the laboratory
 we were presented a project that implemented some betting app and this may be why I chose to do 
-something kind of similar. Moreover, some time ago I have seen some other YouTube video about the 
-history of slot machines - [link](https://youtu.be/nt1Qmze8cPg) - that convinced me to investigate
+something kind of similar. Moreover, some time ago I have seen some other [YouTube video about the 
+history of slot machines](https://youtu.be/nt1Qmze8cPg) that convinced me to investigate
 this topic further.  
 (In addition to that I may have a gambling + alcohol ~~addiction~~ dedication. *joke*)
 
