@@ -46,7 +46,7 @@ amountBet.
 
 - First Tier - 1 symbol corresponding to the jackpot symbol in the classic game
   
-  <img src="src/images/bottles/tuica.png" alt="Țuică" width="200" height="400">
+  <img src="src/images/bottles/tuica.png" alt="Țuică" style="width:200px;height:400px;">
   <br>
 
 - *There is no scatter symbol unlike in the classic game*
@@ -54,29 +54,29 @@ amountBet.
 
 - Second Tier - 2 symbols
   
-  <img src="src/images/bottles/jack.png" alt="Jack Daniel's" width="200" height="400">
+  <img src="src/images/bottles/jack.png" alt="Jack Daniel's" style="width:200px;height:400px;">
   <br>
-  <img src="src/images/bottles/vodka.png" alt="Vodka" width="200" height="400">
+  <img src="src/images/bottles/vodka.png" alt="Vodka" style="width:200px;height:400px;">
   <br>
 
 - Third Tier - 3 symbols
 
-  <img src="src/images/bottles/gin.png" alt="Gin" width="200" height="400"> 
+  <img src="src/images/bottles/gin.png" alt="Gin" style="width:200px;height:400px;"> 
   <br>
-  <img src="src/images/bottles/rum.png" alt="Rum" width="200" height="400">
+  <img src="src/images/bottles/rum.png" alt="Rum" style="width:200px;height:400px;">
   <br>
-  <img src="src/images/bottles/campari.png" alt="Campari" width="200" height="400">
+  <img src="src/images/bottles/campari.png" alt="Campari" style="width:200px;height:400px;">
   <br>
 
 - Fourth Tier - 4 symbols
   
-  <img src="src/images/bottles/champagne.png" alt="Champagne" width="200" height="400">
+  <img src="src/images/bottles/champagne.png" alt="Champagne" style="width:200px;height:400px;">
   <br>
-  <img src="src/images/bottles/wine.png" alt="Wine" width="200" height="400">
+  <img src="src/images/bottles/wine.png" alt="Wine" style="width:200px;height:400px;">
   <br>
-  <img src="src/images/bottles/strongbow.png" alt="Strongbow" width="200" height="400">
+  <img src="src/images/bottles/strongbow.png" alt="Strongbow" style="width:200px;height:400px;">
   <br>
-  <img src="src/images/bottles/beer.png" alt="Beer" width="200" height="400">
+  <img src="src/images/bottles/beer.png" alt="Beer" style="width:200px;height:400px;">
   <br>
 
 The reward system is based on the number of identical tier symbols that appear in the **middle row**.
