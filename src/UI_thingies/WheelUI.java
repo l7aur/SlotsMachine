@@ -36,25 +36,25 @@ public class WheelUI extends QGraphicsView {
             posX.add(i * width);
             posY.add(i * height);
         }
-        numberToPic.put(wheel.getTier1Number().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\tuica.png")
+        numberToPic.put(wheel.getTier1Number().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\tuica.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier2Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\jack.png")
+        numberToPic.put(wheel.getTier2Number1().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\jack.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier2Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\vodka.png")
+        numberToPic.put(wheel.getTier2Number2().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\vodka.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier3Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\gin.png")
+        numberToPic.put(wheel.getTier3Number1().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\gin.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier3Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\rum.png")
+        numberToPic.put(wheel.getTier3Number2().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\rum.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier3Number3().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\campari.png")
+        numberToPic.put(wheel.getTier3Number3().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\campari.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier4Number1().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\champagne.png")
+        numberToPic.put(wheel.getTier4Number1().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\champagne.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier4Number2().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\wine.png")
+        numberToPic.put(wheel.getTier4Number2().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\wine.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier4Number3().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\strongbow.png")
+        numberToPic.put(wheel.getTier4Number3().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\strongbow.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
-        numberToPic.put(wheel.getTier4Number4().getUniqueIdentifier(), new QPixmap("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\bottles\\beer.png")
+        numberToPic.put(wheel.getTier4Number4().getUniqueIdentifier(), new QPixmap("src\\images\\bottles\\beer.png")
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
 
         //initialize the game grid and the image postion vectors

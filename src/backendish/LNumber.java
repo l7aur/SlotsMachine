@@ -1,6 +1,6 @@
 package backendish;
 
-public class LNumber implements LuckyNumber{
+public class LNumber {
     protected Integer id;
     protected Integer uniqueIdentifier;
     protected Double multiplierx1;
@@ -33,7 +33,6 @@ public class LNumber implements LuckyNumber{
         return multiplierx3;
     }
 
-    @Override
     public Double getMultiplier(Integer number) {
         return switch (number) {
             case 1 -> this.getMultiplierx1();
