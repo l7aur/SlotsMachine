@@ -16,10 +16,12 @@ public class Window extends QWidget {
         setWindowTitle(gameName);
         setWindowIcon(icon);
         QLabel accountSoldDisplay = new QLabel("SOLD: " + account.getSold().toString());
-        //betLabel = new QLabel("BET: ");
-        QTextEdit betAmount = new QTextEdit("50");
+        QLabel betLabel = new QLabel("BET: ");
+//        QTextEdit betAmount = new QTextEdit("PLACE BET");
+        QTextEdit betAmount = new QTextEdit("100");
         accountSoldDisplay.setAlignment(Qt.AlignmentFlag.AlignCenter);
         betAmount.setAlignment(Qt.AlignmentFlag.AlignCenter);
+        betAmount.setFixedSize(100,30);
 
         //create the exit button, the roll button + the listeners, the display of the sold and the bet
         ExitButton exitButton = new ExitButton(this);
@@ -35,8 +37,6 @@ public class Window extends QWidget {
         QBoxLayout layout = exitButton.buttonLeftCornerLayout();
         layout.addWidget(accountSoldDisplay);
         layout.addWidget(betAmount);
-
-        //layout.setAlignment();
 
         //add the initial wheel
         WheelUI wheel = new WheelUI(new QGraphicsScene(), theWheel);

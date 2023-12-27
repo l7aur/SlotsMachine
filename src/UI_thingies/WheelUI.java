@@ -58,20 +58,21 @@ public class WheelUI extends QGraphicsView {
                 .scaled(new QSize(width, height), Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation));
 
         //initialize the game grid and the image postion vectors
-        displayedGrid = new QPixmap[dimension][dimension];
+        this.displayedGrid = new QPixmap[dimension][dimension];
         //initialize each item in the matrix with a picture contained at string
         this.updateNewDisplayedGrid(wheel);
     }
     public void updateNewDisplayedGrid(Wheel wheel){
-        for(int i = 0; i < dimension; i++)
-            for(int j = 0; j < dimension; j++) {
-                this.setDisplayedGrid(i,j, numberToPic.get(wheel.getLuckyNumbers().get(i * dimension + j)));
+        for(int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
+                this.setDisplayedGrid(i, j, numberToPic.get(wheel.getLuckyNumbers().get(i * dimension + j)));
                 QGraphicsPixmapItem item = new QGraphicsPixmapItem(this.getDisplayedGrid(i, j));
                 //set the position of each image based on the position vectors
                 item.setPos(posX.get(j), posY.get(i));
                 //add the item to the scene
                 Objects.requireNonNull(this.scene()).addItem(item);
             }
+        }
     }
 
     private QPixmap getDisplayedGrid(int i, int j) {
