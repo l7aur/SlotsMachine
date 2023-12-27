@@ -79,17 +79,22 @@ The reward system is based on the number of identical tier symbols that appear i
   - Tier 2 → x 5
   - Tier 3 → x 1.25
   - Tier 4 → x 0.5
-- no identical symbols -> all points are lost, no return
+- no identical symbols → all points are lost, no return
 
 Detailed description of the project, its purpose, features, and functionalities.
 
 ## Installation
 
-Instructions on how to install the project, including any dependencies and setup required.
+Download the project and the Qt dependencies and run it in a Java IDE.
 
 ## Usage
 
-Guidelines and examples on how to use the project, including code snippets or commands.
+After you run the project a pop-up window appears with 2 buttons: Roll and Exit. The Exit Button
+closes the app while the Roll Button initializes a roll. In addition to that there is the game screen
+itself that is initialized with 9 Tier 1s elements, the Sold text field that shows how much points are in
+the account at the current roll and the Bid Field where the player can choose a value to bid. (The field is
+as stupid proof as I could imagine). When the Roll Button is pressed  new pop-up window appears that shows 
+the result of the roll and the new sold that is in the account.
 
 ## Further developments
 
