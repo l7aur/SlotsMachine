@@ -26,7 +26,7 @@ The project is based on Java and Qt Jambi. I chose Qt Jambi over Java Swing or J
 - Never before have I worked with this kind of tools or done any GUI
 - Some guys on StackOverflow said Qt is better
 
-!["Liberty Bell" machine from wikipedia.org](src\images\Liberty_bell.jpg)
+!["Liberty Bell" machine](src\images\Liberty_bell.jpg)
 
 The purpose of the project is to simulate a classic slot machine with some changes:
 - I have replaced the classic fruit, scatter and jackpot symbols with different bottles of alcoholic, commercial beverages   
@@ -93,6 +93,7 @@ Information about the project's license. Specify the type of license and include
 
 ## Additional Sections (Optional)
 
+All the images are available on the internet for free use. None is mine. 
 - Troubleshooting
 - FAQs
 - Credits
