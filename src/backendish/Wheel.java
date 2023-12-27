@@ -27,7 +27,7 @@ public class Wheel {
         }
     }
 
-    public void getNewWheel() {
+    public Double getNewWheel() {
         //delete the previous values
         this.luckyNumbers.clear();
         System.out.println("New wheel generation: ");
@@ -37,6 +37,50 @@ public class Wheel {
             System.out.print(luckyNumbers.get(i) + " ");
         }
         System.out.println();
+        int[] equalities = this.findEqualities();
+        //oop broke here as well
+        for(int i = 0; i < 4; i++) {
+            if(equalities[i] == 3){
+                switch (i){
+                    case 0:
+                        return tier1Number.multiplierx3;
+                    case 1:
+                        return tier2Number1.multiplierx3;
+                    case 2:
+                        return tier3Number1.multiplierx3;
+                    case 3:
+                        return tier4Number1.multiplierx3;
+                }
+            }
+            else if(equalities[i] == 2){
+                switch (i){
+                    case 0:
+                        return tier1Number.multiplierx2;
+                    case 1:
+                        return tier2Number1.multiplierx2;
+                    case 2:
+                        return tier3Number1.multiplierx2;
+                    case 3:
+                        return tier4Number1.multiplierx2;
+                }
+            }
+        }
+        return 0.0;
+    }
+    private int[] findEqualities(){
+        //brute force cause no other idea we won t speak about how inimaginably bad this is (the oop broke)
+        int[]  counter = {0, 0, 0, 0};
+        for(int i = 3; i <= 5; i++){
+            if(this.luckyNumbers.get(i) == 0)
+                counter[0]++;
+            else if(this.luckyNumbers.get(i) >= 1 && this.luckyNumbers.get(i) <= 2)
+                counter[1]++;
+            else if(this.luckyNumbers.get(i) >= 3 && this.luckyNumbers.get(i) <= 5)
+                counter[2]++;
+            else if(this.luckyNumbers.get(i) >= 6 && this.luckyNumbers.get(i) <= 9)
+                counter[3]++;
+        }
+        return counter;
     }
     public ArrayList<Integer> getLuckyNumbers() {
         return luckyNumbers;

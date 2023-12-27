@@ -53,9 +53,11 @@ public class Window extends QWidget {
         this.show();
     }
 
-    public Window updateWindow(Wheel wheel, Account account){
+    public Window updateWindow(Wheel wheel, Account account, Double betAmount){
         //get new values in the wheel roll
-        wheel.getNewWheel();
+        Double winning = wheel.getNewWheel() * betAmount;
+        account.updateSold(winning);
+        System.out.println("Win: " + winning.toString());
         //update the display
         Window newWindow = new Window(wheel, account);
         newWindow.show();

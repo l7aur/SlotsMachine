@@ -1,19 +1,19 @@
 package backendish;
 
 public class Account {
-    private Integer sold;
+    private Double sold;
 
-    public Account(Integer sold){
+    public Account(Double sold){
         this.setSold(sold);
     }
-    public Integer getSold() {
+    public Double getSold() {
         return sold;
     }
 
-    public void setSold(Integer sold) {
+    public void setSold(Double sold) {
         this.sold = sold;
     }
-    public void updateSold(Integer sold) {
+    public void updateSold(Double sold) {
         this.sold += sold;
     }
 }
