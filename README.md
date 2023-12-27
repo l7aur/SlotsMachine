@@ -36,7 +36,7 @@ the application starts, the sold in the account is set to 1000.
 - The original slot machine has mechanically based behavior meaning that the symbols are placed on a circular gear that
 is set to motion based on a lever that the player uses. The symbols are placed in a certain order that does not change based
 on how many times I play. My simulation uses a (pseudo)random number generator (Rand class provided by Java) to replicate 
-the randomness of the real slot machine. This implies that there is not a fix order of the symbols I use (any symbol can precede/succed
+the randomness of the real slot machine. This implies that there is not a fix order of the symbols I use (any symbol can precede/succeed
 or be preceded/succeeded by any other symbol). The immediate result is that the outcome of each "Roll" is rather a loss than a win. 
 
 
