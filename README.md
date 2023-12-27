@@ -62,16 +62,16 @@ amountBet.
   
 The reward system is based on the number of identical tier symbols that appear in the **middle row**.
 - 3 identical symbols of
-  - Tier 1 => x 10,000
-  - Tier 2 => x 1,000
-  - Tier 3 => x 100
-  - Tier 4 => x 10
+  - Tier 1 -> x 10,000
+  - Tier 2 -> x 1,000
+  - Tier 3 -> x 100
+  - Tier 4 -> x 10
 - 2 identical symbols of  
-  - Tier 1 => x 10
-  - Tier 2 => x 5
-  - Tier 3 => x 1.25
-  - Tier 4 => x 0.5
-- no identical symbols => all points are lost, no return
+  - Tier 1 -> x 10
+  - Tier 2 -> x 5
+  - Tier 3 -> x 1.25
+  - Tier 4 -> x 0.5
+- no identical symbols -> all points are lost, no return
 
 Detailed description of the project, its purpose, features, and functionalities.
 
