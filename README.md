@@ -1,4 +1,4 @@
-# Kamchatka Gulag Slots Simulator
+# Sahalin Gulag Slots Simulator
 
 This is the mandatory project required for the object-oriented programming course (OOP) in the 
 second year at Technical University of Cluj-Napoca. Its purpose is to familiarize one with the

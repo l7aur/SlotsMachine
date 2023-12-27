@@ -7,8 +7,8 @@ import io.qt.widgets.*;
 
 public class Window extends QWidget {
     //parametrisation
-    private static final QIcon icon = new QIcon("C:\\Users\\L7aur\\IdeaProjects\\SlotsMachine\\src\\images\\logo2.png");
-    private static final String gameName = "KamchatkaGulagSlots";
+    private static final QIcon icon = new QIcon("src\\images\\logo2.png");
+    private static final String gameName = "Sahalin Gulag Slots";
     //private QLabel betLabel;
     public Window(Wheel theWheel, Account account) {
         //create a window, name it and set its icon
